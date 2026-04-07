@@ -39,9 +39,11 @@ class Client {
         this.paidInFull = ((quote - paid) == 0) ? true : false;
     }
 
-    public String printClient() {
-        return "\nClient Name: " + this.name + "\nClient Address: " 
-        + this.address + "\n";
+    public String toString() {
+        String clientDetails = (paidInFull) ? "\nClient Name: " + this.name + "\nClient Address: " 
+        + this.address + "\nCLient has paid full balance!" : "\nClient Name: " + this.name + "\nClient Address: " 
+        + this.address + "\nTotal Quote: " + this.quote + "\n";
+        return clientDetails;
     }
 
 
