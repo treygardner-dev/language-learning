@@ -18,7 +18,9 @@ public class ExampleProgram {
     /* main entry point */
     public static void main(String[] args) {
 
-        System.out.println("Hello, World!");
+        //System.out.println("Hello, World!");
+        Client test_client = new Client("Trey Gardner", "2550 Cahill Pond View APT. 213", 43000, 2500);
+        test_client.toString();
 
     }
 }
@@ -37,7 +39,7 @@ class Client {
         this.quote = quote;
         this.paid = paid;
         this.paidInFull = ((quote - paid) == 0) ? true : false;
-    }
+    } /* Constructor */
 
     public String toString() {
         String clientDetails = (paidInFull) ? "\nClient Name: " + this.name 
@@ -45,7 +47,6 @@ class Client {
             : "\nClient Name: " + this.name + "\nClient Address: " + this.address 
             + "\nTotal Quote: " + this.quote + "\nRemainder Owed: " + (this.quote - this.paid);
         return clientDetails;
-    }
+    } /* toString */
 
-
-}
+}/* Client */
