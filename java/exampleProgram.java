@@ -40,9 +40,10 @@ class Client {
     }
 
     public String toString() {
-        String clientDetails = (paidInFull) ? "\nClient Name: " + this.name + "\nClient Address: " 
-        + this.address + "\nCLient has paid full balance!" : "\nClient Name: " + this.name + "\nClient Address: " 
-        + this.address + "\nTotal Quote: " + this.quote + "\n";
+        String clientDetails = (paidInFull) ? "\nClient Name: " + this.name 
+            + "\nClient Address: " + this.address + "\nCLient has paid full balance!" 
+            : "\nClient Name: " + this.name + "\nClient Address: " + this.address 
+            + "\nTotal Quote: " + this.quote + "\nRemainder Owed: " + (this.quote - this.paid);
         return clientDetails;
     }
 
